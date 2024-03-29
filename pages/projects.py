@@ -60,7 +60,7 @@ def layout():
 )
 
 def train_and_display_model(k, sample_size):
-    diabetes_data = pd.read_csv("/Users/matphat/resume/Dash-by-Plotly/Good_to_Know/resume/diabetes.csv") 
+    diabetes_data = pd.read_csv("diabetes.csv") 
     data_filtered = diabetes_data.drop(['gender', 'hypertension', 'heart_disease', 'smoking_history'], axis = 1)
 
     x_data = pd.get_dummies(data_filtered.drop(['diabetes'],axis=1))
