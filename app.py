@@ -3,6 +3,7 @@ from dash import Dash, html
 import dash_bootstrap_components as dbc
 
 app = Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.SUPERHERO])
+server = app.server
 
 header = dbc.Navbar(
     dbc.Container(
@@ -27,3 +28,4 @@ app.layout = dbc.Container([header, dash.page_container], fluid=True)
 
 if __name__ == '__main__':
 	app.run_server(debug=True)
+	
